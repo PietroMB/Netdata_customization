@@ -5,8 +5,6 @@
     <title>System Monitor</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <!--Import Google Icon Font-->
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
@@ -18,23 +16,22 @@
 <script>
     var netdataTheme = 'slate';
 </script>
-<script type="text/javascript" src="dashboard.js">
-</script>
+<script type="text/javascript" src="http://localhost:19999/dashboard.js"></script>
 <script>
     // destroy charts not shown (lowers memory on the browser) I USE 24GB SO MEMORY IS NO ISSUE
-    NETDATA.options.current.destroy_on_hide = false;
+    //NETDATA.options.current.destroy_on_hide = false;
 
     // set this to false, to always show all dimensions
-    NETDATA.options.current.eliminate_zero_dimensions = true;
+    //NETDATA.options.current.eliminate_zero_dimensions = true;
 
     // always update the charts, even if focus is lost. THIS IS NOT ON BY DEFAULT AND CAN BE RESOURCE INTENSIVE
     NETDATA.options.current.stop_updates_when_focus_is_lost = false;
 
     // This will reload the page every RELOAD_EVERY minutes MINE IS SET TO 10 MINS
-    var RELOAD_EVERY = 10;
-    setTimeout(function() {
-        location.reload();
-    }, RELOAD_EVERY * 60 * 1000);
+    //var RELOAD_EVERY = 10;
+    //setTimeout(function() {
+        //location.reload();
+//    }, RELOAD_EVERY * 60 * 1000);
 </script>
 
 <body style="background-color:#272b30; overflow-x: hidden; overflow-y: hidden;">
@@ -44,7 +41,7 @@
             data-units="%" data-height="100%" data-after="-300" data-points="300" style="margin-left: 3%"></div>
         </div>
         <div class="col s4 m3">
-            <div data-netdata="system.ram" data-host="http://localhost:19999" data-dimensions="used|buffers|active|wired" data-chart-library="easypiechart" data-append-options="percentage" data-title="Used RAM" data-units="%" data-easypiechart-max-value="100" data-width="95%"
+            <div data-netdata="system.ram" data-host="http://localhost:19999" data-dimensions="used|buffers|active|wired" data-chart-library="easypiechart" data-append-options="percentage" data-title="Used RAM" data-units="%" data-easypiechart-max-value="100" data-width="95%" data-height="100%"
             data-after="-540" data-points="540" data-colors="#DD4400">
             </div>
         </div>
@@ -53,7 +50,7 @@
             data-points="540" data-width="95%" data-colors="#ee9911" role="application"></div>
         </div>
         <div class="col s4 m3">
-            <div data-netdata="net.enp3s0" data-host="http://localhost:19999" data-decimal-digits="0" data-title="Used LAN" data-chart-library="easypiechart" data-width="95%" data-colors="#01579b" data-height="100%" data-after="-300" data-points="300"></div>
+            <div data-netdata="net.enp37s0" data-host="http://localhost:19999" data-decimal-digits="0" data-title="Used LAN" data-chart-library="easypiechart" data-width="95%" data-colors="#01579b" data-height="100%" data-after="-300" data-points="300"></div>
         </div>
     </div>
 
@@ -61,7 +58,7 @@
     <div style="width: 100%; height: 24vh; text-align: center; display: inline-block;">
         <div style="width: 100%; height: calc(100% - 15px); text-align: center; display: inline-block;">
             <div data-netdata="system.cpu" data-host="http://localhost:19999" data-common-max="io" data-colors="#4caf50" data-common-min="io" data-title="Used CPU" data-legend="no" data-chart-library="dygraph" data-width="100%" data-height="90%" data-after="-300"></div>
-            <div data-netdata="net.enp3s0" data-host="http://localhost:19999" data-title="Bandwidht" data-dygraph-max-value="100" data-chart-library="dygraph" data-width="100%" data-height="90%" data-after="-300" data-legend="no"></div>
+            <div data-netdata="net.enp37s0" data-host="http://localhost:19999" data-title="Bandwidht" data-dygraph-max-value="100" data-chart-library="dygraph" data-width="100%" data-height="90%" data-after="-300" data-legend="no"></div>
         </div>
     </div>
 
@@ -103,6 +100,22 @@ CPU tachimetro
     <!--Import jQuery before materialize.js-->
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="js/materialize.min.js"></script>
+
+    <script>
+     // var time = new Date().getTime();
+     // $(document.body).bind("mousemove keypress", function(e) {
+     //     time = new Date().getTime();
+     // });
+     //
+     // function refresh() {
+     //     if(new Date().getTime() - time >= 60000)
+     //         window.location.reload(true);
+     //     else
+     //         setTimeout(refresh, 10000);
+     // }
+     //
+     // setTimeout(refresh, 10000);
+</script>
 </body>
 
 </html>
