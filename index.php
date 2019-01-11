@@ -58,6 +58,7 @@
     <div style="width: 100%; height: 24vh; text-align: center; display: inline-block;">
         <div style="width: 100%; height: calc(100% - 15px); text-align: center; display: inline-block;">
             <div data-netdata="system.cpu" data-host="http://localhost:19999" data-common-max="io" data-colors="#4caf50" data-common-min="io" data-title="Used CPU" data-legend="no" data-chart-library="dygraph" data-width="100%" data-height="90%" data-after="-300"></div>
+            <div data-netdata="apps.cpu" data-host="http://localhost:19999" data-title="Apps CPU" data-legend="no" data-chart-library="dygraph" data-width="100%" data-height="90%" data-after="-300"></div>
             <div data-netdata="net.enp37s0" data-host="http://localhost:19999" data-title="Bandwidht" data-dygraph-max-value="100" data-chart-library="dygraph" data-width="100%" data-height="90%" data-after="-300" data-legend="no"></div>
         </div>
     </div>
