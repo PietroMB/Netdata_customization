@@ -9,6 +9,7 @@
     <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <!--Import materialize.css-->
     <link type="text/css" rel="stylesheet" href="css/materialize.min.css" media="screen,projection" />
+    <link type="text/css" rel="stylesheet" href="css/master.css" />
 
     <!--Let browser know website is optimized for mobile-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -35,6 +36,11 @@
 </script>
 
 <body style="background-color:#272b30; overflow-x: hidden; overflow-y: hidden;">
+
+
+    <div class="fullscreen">
+      &nbsp;
+    </div>
     <div class="row">
         <div class="col s4 m3">
             <div data-netdata="system.cpu" data-host="http://localhost:19999" data-decimal-digits="0" data-title="Used CPU" data-chart-library="easypiechart" data-colors="#4caf50" data-easypiechart-max-value="100" data-width="95%" data-append-options="percentage"
